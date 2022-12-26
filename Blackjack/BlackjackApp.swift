@@ -11,7 +11,7 @@ import SwiftUI
 struct BlackjackApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView(viewModel: GameViewModel(game: Game(player: Player(), dealer: Player(), deck: Deck(numberOfDecks: 6))))
         }
     }
 }

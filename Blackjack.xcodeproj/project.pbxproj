@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		E66242D2295A31D500DEDC80 /* BlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242D1295A31D500DEDC80 /* BlackjackApp.swift */; };
-		E66242D4295A31D500DEDC80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242D3295A31D500DEDC80 /* ContentView.swift */; };
+		E66242D4295A31D500DEDC80 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242D3295A31D500DEDC80 /* GameView.swift */; };
 		E66242D6295A31D600DEDC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66242D5295A31D600DEDC80 /* Assets.xcassets */; };
 		E66242D9295A31D600DEDC80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66242D8295A31D600DEDC80 /* Preview Assets.xcassets */; };
+		E66242E0295A321400DEDC80 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242DF295A321400DEDC80 /* Card.swift */; };
+		E66242E2295A322D00DEDC80 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242E1295A322D00DEDC80 /* Deck.swift */; };
+		E66242E4295A324E00DEDC80 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242E3295A324E00DEDC80 /* Player.swift */; };
+		E66242E6295A326C00DEDC80 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242E5295A326C00DEDC80 /* Game.swift */; };
+		E66242E8295A329100DEDC80 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242E7295A329100DEDC80 /* PlayerView.swift */; };
+		E66242EA295A32A700DEDC80 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242E9295A32A700DEDC80 /* CardView.swift */; };
+		E66242EC295A32D200DEDC80 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242EB295A32D200DEDC80 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E66242CE295A31D500DEDC80 /* Blackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66242D1295A31D500DEDC80 /* BlackjackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackApp.swift; sourceTree = "<group>"; };
-		E66242D3295A31D500DEDC80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E66242D3295A31D500DEDC80 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		E66242D5295A31D600DEDC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E66242D8295A31D600DEDC80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E66242DF295A321400DEDC80 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E66242E1295A322D00DEDC80 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		E66242E3295A324E00DEDC80 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		E66242E5295A326C00DEDC80 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		E66242E7295A329100DEDC80 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		E66242E9295A32A700DEDC80 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E66242EB295A32D200DEDC80 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				E66242D1295A31D500DEDC80 /* BlackjackApp.swift */,
-				E66242D3295A31D500DEDC80 /* ContentView.swift */,
+				E66242D3295A31D500DEDC80 /* GameView.swift */,
+				E66242E9295A32A700DEDC80 /* CardView.swift */,
+				E66242E7295A329100DEDC80 /* PlayerView.swift */,
+				E66242EB295A32D200DEDC80 /* GameViewModel.swift */,
+				E66242E3295A324E00DEDC80 /* Player.swift */,
+				E66242DF295A321400DEDC80 /* Card.swift */,
+				E66242E1295A322D00DEDC80 /* Deck.swift */,
+				E66242E5295A326C00DEDC80 /* Game.swift */,
 				E66242D5295A31D600DEDC80 /* Assets.xcassets */,
 				E66242D7295A31D600DEDC80 /* Preview Content */,
 			);
@@ -137,7 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E66242D4295A31D500DEDC80 /* ContentView.swift in Sources */,
+				E66242EC295A32D200DEDC80 /* GameViewModel.swift in Sources */,
+				E66242E2295A322D00DEDC80 /* Deck.swift in Sources */,
+				E66242E6295A326C00DEDC80 /* Game.swift in Sources */,
+				E66242E8295A329100DEDC80 /* PlayerView.swift in Sources */,
+				E66242D4295A31D500DEDC80 /* GameView.swift in Sources */,
+				E66242E0295A321400DEDC80 /* Card.swift in Sources */,
+				E66242E4295A324E00DEDC80 /* Player.swift in Sources */,
+				E66242EA295A32A700DEDC80 /* CardView.swift in Sources */,
 				E66242D2295A31D500DEDC80 /* BlackjackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
