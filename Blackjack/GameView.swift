@@ -17,8 +17,16 @@ struct GameView: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack {
-                PlayerView(player: viewModel.game.dealer )
-                    .padding(5)
+                ZStack{
+                    PlayerView(player: viewModel.game.dealer )
+                        .padding(5)
+                    CardBackView()
+                        .opacity(viewModel.standButtonVisible ? 1 : 0)
+                        .padding(.trailing, 252)
+                    
+                }
+                    
+
                 Text("Dealer Hand: \(viewModel.dealerHandTotal)")
                     .foregroundColor(.white)
                     .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 0, y:4)
@@ -41,8 +49,11 @@ struct GameView: View {
                         }
                     }, label: {
                        Image("hitButton")
+                            .resizable()
                             .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 2, y:2)
-                            .offset(x: 50)
+                            .scaledToFit()
+                            .padding(.leading, 5)
+                            
                     })
                     .opacity(viewModel.hitButtonVisible ? 1 : 0)
                     
@@ -51,7 +62,11 @@ struct GameView: View {
                         
                     }, label: {
                         Image("newButton")
+                            .resizable()
                             .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 2, y:2)
+                            .scaledToFit()
+
+                        
                     })
                     .opacity(viewModel.newGameButtonVisible ? 1 : 0)
                     
@@ -61,8 +76,10 @@ struct GameView: View {
                         }
                     }, label: {
                         Image("standButton")
+                            .resizable()
                             .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 2, y:2)
-                            .offset(x: -50)
+                            .scaledToFit()
+                            .padding(.trailing, 5)
                     })
                     .opacity(viewModel.standButtonVisible ? 1 : 0)
                 }

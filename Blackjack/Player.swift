@@ -9,10 +9,16 @@ import SwiftUI
 
 class Player: ObservableObject {
     @Published var hand: [Card]
-    
+    var name: String
+
+    var score: Int {
+        return calculateScore()
+    }
+
+        
     init() {
         self.hand = []
-        
+        self.name = ""
     }
     
     func receiveCard(card: Card) {

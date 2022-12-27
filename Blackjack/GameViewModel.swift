@@ -21,7 +21,7 @@ class GameViewModel: ObservableObject {
         self.winner = ""
         game.startNewGame()
         playerHandTotal = game.player.calculateScore()
-        dealerHandTotal = game.dealer.calculateScore()
+        dealerHandTotal = game.dealer.hand[0].rank.setValue
         checkForBlackJack()
         
     }
@@ -41,7 +41,7 @@ class GameViewModel: ObservableObject {
         winner = ""
         game.startNewGame()
         playerHandTotal = game.player.calculateScore()
-        dealerHandTotal = game.dealer.calculateScore()
+        dealerHandTotal = game.dealer.hand[0].rank.setValue
         hitButtonVisible = true
         standButtonVisible = true
         newGameButtonVisible = false

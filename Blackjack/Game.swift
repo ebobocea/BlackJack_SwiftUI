@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Game {
+class Game: ObservableObject {
     var player: Player
     var dealer: Player
     var deck: Deck

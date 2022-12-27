@@ -9,11 +9,11 @@ import SwiftUI
 
 struct PlayerView: View {
     @ObservedObject var player: Player
-    
+
     init(player: Player) {
         self.player = player
     }
-    
+
     var body: some View {
         LazyVGrid(columns: [GridItem(.adaptive (minimum: 100), spacing: -70)]) {
             ForEach(player.hand) { card in
@@ -29,4 +29,3 @@ struct PlayerView_Previews: PreviewProvider {
         PlayerView(player: Player())
     }
 }
-
