@@ -10,15 +10,17 @@ import SwiftUI
 class Player: ObservableObject {
     @Published var hand: [Card]
     var name: String
+    @Published var balance: Int
 
     var score: Int {
         return calculateScore()
     }
 
         
-    init() {
+    init(balance: Int) {
         self.hand = []
         self.name = ""
+        self.balance = balance
     }
     
     func receiveCard(card: Card) {

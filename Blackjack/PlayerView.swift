@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlayerView: View {
     @ObservedObject var player: Player
+    
 
     init(player: Player) {
         self.player = player
@@ -26,6 +27,6 @@ struct PlayerView: View {
 
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerView(player: Player())
+        PlayerView(player: Player(balance: 100))
     }
 }

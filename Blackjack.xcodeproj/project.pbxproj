@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E64A67F9295B94AD00C81A94 /* DealerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A67F8295B94AD00C81A94 /* DealerView.swift */; };
 		E66242D2295A31D500DEDC80 /* BlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242D1295A31D500DEDC80 /* BlackjackApp.swift */; };
 		E66242D4295A31D500DEDC80 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242D3295A31D500DEDC80 /* GameView.swift */; };
 		E66242D6295A31D600DEDC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66242D5295A31D600DEDC80 /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E64A67F8295B94AD00C81A94 /* DealerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerView.swift; sourceTree = "<group>"; };
 		E66242CE295A31D500DEDC80 /* Blackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66242D1295A31D500DEDC80 /* BlackjackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackApp.swift; sourceTree = "<group>"; };
 		E66242D3295A31D500DEDC80 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -69,14 +67,13 @@
 			children = (
 				E66242D1295A31D500DEDC80 /* BlackjackApp.swift */,
 				E66242D3295A31D500DEDC80 /* GameView.swift */,
-				E66242E9295A32A700DEDC80 /* CardView.swift */,
-				E66242E7295A329100DEDC80 /* PlayerView.swift */,
 				E66242EB295A32D200DEDC80 /* GameViewModel.swift */,
+				E66242E5295A326C00DEDC80 /* Game.swift */,
+				E66242E7295A329100DEDC80 /* PlayerView.swift */,
 				E66242E3295A324E00DEDC80 /* Player.swift */,
+				E66242E9295A32A700DEDC80 /* CardView.swift */,
 				E66242DF295A321400DEDC80 /* Card.swift */,
 				E66242E1295A322D00DEDC80 /* Deck.swift */,
-				E64A67F8295B94AD00C81A94 /* DealerView.swift */,
-				E66242E5295A326C00DEDC80 /* Game.swift */,
 				E66242D5295A31D600DEDC80 /* Assets.xcassets */,
 				E66242D7295A31D600DEDC80 /* Preview Content */,
 			);
@@ -164,7 +161,6 @@
 				E66242EC295A32D200DEDC80 /* GameViewModel.swift in Sources */,
 				E66242E2295A322D00DEDC80 /* Deck.swift in Sources */,
 				E66242E6295A326C00DEDC80 /* Game.swift in Sources */,
-				E64A67F9295B94AD00C81A94 /* DealerView.swift in Sources */,
 				E66242E8295A329100DEDC80 /* PlayerView.swift in Sources */,
 				E66242D4295A31D500DEDC80 /* GameView.swift in Sources */,
 				E66242E0295A321400DEDC80 /* Card.swift in Sources */,
