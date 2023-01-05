@@ -11,11 +11,13 @@ class Game{
     var player: Player
     var dealer: Player
     var deck: Deck
+    var wallet: Wallet
     
-    init(player: Player, dealer: Player, deck: Deck) {
+    init(player: Player, dealer: Player, deck: Deck, wallet: Wallet) {
         self.player = player
         self.dealer = dealer
         self.deck = deck
+        self.wallet = wallet
     }
     
     func startNewGame() {
@@ -40,6 +42,7 @@ class Game{
     }
     
     func stand() {
+        wallet.bet = 0
         // while the dealer's hand is below 17, have the dealer hit
         while dealer.calculateScore() < 17 {
             hit(player: dealer)

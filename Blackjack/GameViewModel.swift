@@ -12,18 +12,13 @@ class GameViewModel: ObservableObject {
     @Published var dealerHandTotal: Int = 0
     @Published var winner: String
     @Published var game: Game
-    @Published var hitButtonVisible: Bool = true
-    @Published var standButtonVisible: Bool = true
-    @Published var newGameButtonVisible: Bool = false
+    @Published var hitButtonVisible: Bool = false
+    @Published var standButtonVisible: Bool = false
+    @Published var newGameButtonVisible: Bool = true
     
     init(game: Game) {
         self.game = game
         self.winner = ""
-        game.startNewGame()
-        playerHandTotal = game.player.calculateScore()
-        dealerHandTotal = game.dealer.hand[0].rank.setValue
-        checkForBlackJack()
-        
     }
     
     func checkForBlackJack(){

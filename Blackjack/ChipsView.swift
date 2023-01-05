@@ -8,28 +8,23 @@
 import SwiftUI
 
 struct ChipsView: View {
+    @EnvironmentObject var viewModel: GameViewModel
     
-    @State private var valueChip = 0
-    @State private var nameChip = ""
     var body: some View {
-        VStack{
-            HStack{
-                ForEach(Chip.allCases, id:\.rawValue) { chip in
-                    ChipView(
-                        image: Image("\(chip)"),
-                        valueOfChip: Text("\(chip.rawValue)")
-                            .foregroundColor(chip.rawValue == 200 ? .black : .white)
-                    )
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .onTapGesture {
-                        nameChip = "\(chip)"
-                        valueChip = chip.rawValue
-                    }
+        HStack{
+            ForEach(Chip.allCases, id:\.rawValue) { chip in
+                ChipView(
+                    image: Image("\(chip)"),
+                    valueOfChip: Text("\(chip.rawValue)")
+                        .foregroundColor(chip.rawValue == 200 ? .black : .white)
+                )
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .onTapGesture {
+                    viewModel.game.wallet.bet = chip.rawValue
+                    viewModel.resetGame()
                 }
-                
             }
-            Text("\(nameChip)")
-            Text("\(valueChip)")
+            
         }
     }
 }
@@ -37,5 +32,6 @@ struct ChipsView: View {
 struct ChipsView_Previews: PreviewProvider {
     static var previews: some View {
         ChipsView()
+        
     }
 }

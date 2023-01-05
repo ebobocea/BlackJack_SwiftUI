@@ -18,6 +18,7 @@
 		E66242E8295A329100DEDC80 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242E7295A329100DEDC80 /* PlayerView.swift */; };
 		E66242EA295A32A700DEDC80 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242E9295A32A700DEDC80 /* CardView.swift */; };
 		E66242EC295A32D200DEDC80 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66242EB295A32D200DEDC80 /* GameViewModel.swift */; };
+		E6B21F4729676D010052F9FA /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B21F4629676D010052F9FA /* Wallet.swift */; };
 		E6C1B0662966D9D000AF385C /* HitOrStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1B0652966D9D000AF385C /* HitOrStand.swift */; };
 		E6C1B0682966DA6A00AF385C /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1B0672966DA6A00AF385C /* ChipView.swift */; };
 		E6C1B06C2966DFC900AF385C /* Chips.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1B06B2966DFC900AF385C /* Chips.swift */; };
@@ -37,6 +38,7 @@
 		E66242E7295A329100DEDC80 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		E66242E9295A32A700DEDC80 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E66242EB295A32D200DEDC80 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		E6B21F4629676D010052F9FA /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		E6C1B0652966D9D000AF385C /* HitOrStand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitOrStand.swift; sourceTree = "<group>"; };
 		E6C1B0672966DA6A00AF385C /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 		E6C1B06B2966DFC900AF385C /* Chips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chips.swift; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 				E66242D1295A31D500DEDC80 /* BlackjackApp.swift */,
 				E66242D3295A31D500DEDC80 /* GameView.swift */,
 				E6C1B0652966D9D000AF385C /* HitOrStand.swift */,
+				E6C1B06D2966E8AE00AF385C /* ChipsView.swift */,
+				E6B21F4629676D010052F9FA /* Wallet.swift */,
 				E66242EB295A32D200DEDC80 /* GameViewModel.swift */,
 				E66242E5295A326C00DEDC80 /* Game.swift */,
 				E66242E7295A329100DEDC80 /* PlayerView.swift */,
@@ -83,7 +87,6 @@
 				E66242E9295A32A700DEDC80 /* CardView.swift */,
 				E66242DF295A321400DEDC80 /* Card.swift */,
 				E66242E1295A322D00DEDC80 /* Deck.swift */,
-				E6C1B06D2966E8AE00AF385C /* ChipsView.swift */,
 				E6C1B0672966DA6A00AF385C /* ChipView.swift */,
 				E6C1B06B2966DFC900AF385C /* Chips.swift */,
 				E66242D5295A31D600DEDC80 /* Assets.xcassets */,
@@ -178,6 +181,7 @@
 				E6C1B06C2966DFC900AF385C /* Chips.swift in Sources */,
 				E66242E0295A321400DEDC80 /* Card.swift in Sources */,
 				E6C1B06E2966E8AE00AF385C /* ChipsView.swift in Sources */,
+				E6B21F4729676D010052F9FA /* Wallet.swift in Sources */,
 				E66242E4295A324E00DEDC80 /* Player.swift in Sources */,
 				E66242EA295A32A700DEDC80 /* CardView.swift in Sources */,
 				E66242D2295A31D500DEDC80 /* BlackjackApp.swift in Sources */,
