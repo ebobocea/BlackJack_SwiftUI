@@ -35,25 +35,10 @@ enum Rank: Int, CaseIterable {
     }
 }
 
-struct Card: Hashable, Identifiable {
-    static func == (lhs: Card, rhs: Card) -> Bool {
-        return lhs.rank == rhs.rank && lhs.suit == rhs.suit && lhs.image == rhs.image && lhs.id == rhs.id
-    }
-    
+struct Card: Identifiable {
     var id = UUID()
     let image: Image
     let suit: Suit
     let rank: Rank
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(rank)
-        hasher.combine(suit)
-    }
-    
-    var hashValue: Int {
-        var hasher = Hasher()
-        hash(into: &hasher)
-        return hasher.finalize()
-    }
 }
 

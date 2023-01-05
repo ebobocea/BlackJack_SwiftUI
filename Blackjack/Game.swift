@@ -7,28 +7,16 @@
 
 import Foundation
 
-class Game: ObservableObject {
+class Game{
     var player: Player
     var dealer: Player
     var deck: Deck
-    @Published var bet: Int
     
     init(player: Player, dealer: Player, deck: Deck) {
         self.player = player
         self.dealer = dealer
         self.deck = deck
-        self.bet = 0
     }
-    func placeBet(amount: Int) {
-        // check if the player has enough balance to place the bet
-        if amount > player.balance {
-            print("Insufficient balance")
-        } else {
-            player.balance -= amount
-            bet = amount
-        }
-    }
-
     
     func startNewGame() {
         if !player.hand.isEmpty && !dealer.hand.isEmpty{
@@ -36,7 +24,6 @@ class Game: ObservableObject {
             dealer.hand.removeAll()
         }
         
-        // shuffle the deck and deal initial hands to the player and dealer
         deck.shuffle()
         
         player.receiveCard(card: deck.deal()!)
@@ -46,7 +33,6 @@ class Game: ObservableObject {
         dealer.receiveCard(card: deck.deal()!)
         
     }
-    
     
     func hit(player: Player) {
         // deal a card to the specified hand
@@ -59,7 +45,6 @@ class Game: ObservableObject {
             hit(player: dealer)
         }
     }
-    
     
     func determineWinner() -> String {
         if player.isBust() {

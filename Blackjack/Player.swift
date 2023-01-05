@@ -10,7 +10,6 @@ import SwiftUI
 class Player: ObservableObject {
     @Published var hand: [Card]
     var name: String
-    @Published var balance: Int
 
     var score: Int {
         return calculateScore()
@@ -20,12 +19,10 @@ class Player: ObservableObject {
     init(balance: Int) {
         self.hand = []
         self.name = ""
-        self.balance = balance
     }
     
     func receiveCard(card: Card) {
         self.hand.append(card)
-        //self.hand.insert(card, at: 0)
     }
     
     func hasBlackjack() -> Bool{
