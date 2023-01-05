@@ -46,6 +46,8 @@ struct GameView: View {
                     .padding(5)
                 
                 HitOrStand()
+                ChipsView()
+                    .padding(.top)
             }
         }
     }
@@ -54,7 +56,7 @@ struct GameView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
-            .environmentObject(GameViewModel(game: Game(player: Player(balance: 100), dealer: Player(balance: 0), deck: Deck(numberOfDecks: 6))))
+            .environmentObject(GameViewModel(game: Game(player: Player(), dealer: Player(), deck: Deck(numberOfDecks: 6))))
     }
 }
 

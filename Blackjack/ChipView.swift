@@ -20,14 +20,13 @@ struct ChipView: View {
             if image != nil {
                 image!
                     .resizable()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 70, height: 70)
                     .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 2, y:2)
             } else {
                 Text("No image")
             }
             if valueOfChip != nil {
-                valueOfChip!
-                    .foregroundColor(.white)
+                    valueOfChip!
             } else {
                 Text("Err..")
                     .foregroundColor(.white)
@@ -38,7 +37,7 @@ struct ChipView: View {
 
 struct ChipView_Previews: PreviewProvider {
     static var previews: some View {
-        ChipView(image: Image("RedChip"), valueOfChip: Text("50"))
-            .previewLayout(.sizeThatFits)
+        ChipView(image: Image("WhiteChip"), valueOfChip: Text("200"))
+//            .previewLayout(.sizeThatFits)
     }
 }

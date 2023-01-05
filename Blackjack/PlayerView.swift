@@ -27,6 +27,6 @@ struct PlayerView: View {
 
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerView(player: Player(balance: 100))
+        PlayerView(player: Player())
     }
 }
