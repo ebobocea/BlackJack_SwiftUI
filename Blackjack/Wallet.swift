@@ -10,7 +10,7 @@ import Foundation
 class Wallet: ObservableObject {
     @Published var balance: Int
     @Published var bet: Int
-    var inssufiicientFunds = false
+    @Published var inssufiicientFunds = false
     
     init(balance: Int, bet: Int = 0, inssufiicientFunds: Bool = false) {
         self.balance = balance
@@ -19,7 +19,7 @@ class Wallet: ObservableObject {
     }
     
     func placeBet(amount: Int){
-        if balance > amount{
+        if balance >= amount{
             balance -= amount
             bet = amount
         } else {

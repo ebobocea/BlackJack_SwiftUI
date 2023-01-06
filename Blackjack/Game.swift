@@ -21,6 +21,7 @@ class Game{
     }
     
     func startNewGame() {
+        wallet.placeBet(amount: wallet.bet)
         if !player.hand.isEmpty && !dealer.hand.isEmpty{
             player.hand.removeAll()
             dealer.hand.removeAll()
@@ -42,7 +43,7 @@ class Game{
     }
     
     func stand() {
-        wallet.bet = 0
+        
         // while the dealer's hand is below 17, have the dealer hit
         while dealer.calculateScore() < 17 {
             hit(player: dealer)
@@ -52,20 +53,29 @@ class Game{
     func determineWinner() -> String {
         if player.isBust() {
             if dealer.isBust() {
+                wallet.bet = 0
                 return "Both Bust"
             } else {
                 return "Player Bust"
             }
         } else if dealer.isBust() {
+            wallet.balance += (wallet.bet * 2)
+            wallet.bet = 0
             return "Dealer bust"
         } else {
             if player.calculateScore() > dealer.calculateScore() {
+                wallet.balance += (wallet.bet * 2)
+                wallet.bet = 0
                 return "Player Win"
             } else if dealer.calculateScore() > player.calculateScore() {
+                wallet.bet = 0
                 return "Dealer Win"
             } else {
+                wallet.balance += wallet.bet
+                wallet.bet = 0
                 return "Tie"
             }
         }
+        
     }
 }

@@ -58,7 +58,7 @@ struct GameView: View {
                 ChipsView()
                     .padding(.top)
                     .opacity(viewModel.newGameButtonVisible ? 1 : 0.5)
-                    .disabled(!viewModel.newGameButtonVisible)
+                    .disabled(!viewModel.newGameButtonVisible || viewModel.game.wallet.inssufiicientFunds)
             }
         }
     }
