@@ -15,11 +15,11 @@ struct ChipsView: View {
             ForEach(Chip.allCases, id:\.rawValue) { chip in
                 ChipView(
                     image: Image("\(chip)"),
-                    valueOfChip: Text("\(chip.rawValue)")
+                    valueOfChip: Text(String(format: "%.1f", chip.rawValue))
                         .foregroundColor(chip.rawValue == 200 ? .black : .white)
                 )
                 .frame(minWidth: 0, maxWidth: .infinity)
-                .onTapGesture {
+                .onTapGesture { 
                     viewModel.game.wallet.bet = chip.rawValue
                     viewModel.resetGame()
                 }

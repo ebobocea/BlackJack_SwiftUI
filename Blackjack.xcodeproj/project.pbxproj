@@ -77,11 +77,11 @@
 			children = (
 				E66242D1295A31D500DEDC80 /* BlackjackApp.swift */,
 				E66242D3295A31D500DEDC80 /* GameView.swift */,
-				E6C1B0652966D9D000AF385C /* HitOrStand.swift */,
-				E6C1B06D2966E8AE00AF385C /* ChipsView.swift */,
 				E6B21F4629676D010052F9FA /* Wallet.swift */,
 				E66242EB295A32D200DEDC80 /* GameViewModel.swift */,
 				E66242E5295A326C00DEDC80 /* Game.swift */,
+				E6C1B06D2966E8AE00AF385C /* ChipsView.swift */,
+				E6C1B0652966D9D000AF385C /* HitOrStand.swift */,
 				E66242E7295A329100DEDC80 /* PlayerView.swift */,
 				E66242E3295A324E00DEDC80 /* Player.swift */,
 				E66242E9295A32A700DEDC80 /* CardView.swift */,

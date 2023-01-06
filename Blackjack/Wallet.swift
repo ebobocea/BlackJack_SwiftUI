@@ -8,22 +8,30 @@
 import Foundation
 
 class Wallet: ObservableObject {
-    @Published var balance: Int
-    @Published var bet: Int
-    @Published var inssufiicientFunds = false
+    @Published var balance: Double
+    @Published var bet: Double
+    @Published var insufficientFunds = false
     
-    init(balance: Int, bet: Int = 0, inssufiicientFunds: Bool = false) {
+    init(balance: Double, bet: Double = 0, insufficientFunds: Bool = false) {
         self.balance = balance
         self.bet = bet
-        self.inssufiicientFunds = inssufiicientFunds
+        self.insufficientFunds = insufficientFunds
     }
     
-    func placeBet(amount: Int){
+    func placeBet(amount: Double){
         if balance >= amount{
             balance -= amount
             bet = amount
+            insufficientFunds = false
         } else {
-            inssufiicientFunds.toggle()
+            insufficientFunds = true
+        }
+    }
+    func checkForBalance(){
+        if balance >= bet{
+            insufficientFunds = false
+        } else {
+            insufficientFunds = true
         }
     }
 }

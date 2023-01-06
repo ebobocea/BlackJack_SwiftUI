@@ -11,13 +11,12 @@ class Game{
     var player: Player
     var dealer: Player
     var deck: Deck
-    var wallet: Wallet
+    var wallet = Wallet(balance: 100)
     
-    init(player: Player, dealer: Player, deck: Deck, wallet: Wallet) {
+    init(player: Player, dealer: Player, deck: Deck) {
         self.player = player
         self.dealer = dealer
         self.deck = deck
-        self.wallet = wallet
     }
     
     func startNewGame() {
@@ -38,44 +37,60 @@ class Game{
     }
     
     func hit(player: Player) {
-        // deal a card to the specified hand
+        
         player.receiveCard(card: deck.deal()!)
     }
     
     func stand() {
         
-        // while the dealer's hand is below 17, have the dealer hit
         while dealer.calculateScore() < 17 {
             hit(player: dealer)
         }
+        
+        wallet.checkForBalance()
     }
     
     func determineWinner() -> String {
-        if player.isBust() {
+        if player.hasBlackjack() {
+            wallet.balance += (wallet.bet * 2.5)  // pay out 3:2 odds for a blackjack
+            wallet.checkForBalance()
+            wallet.bet = 0
+            return "Player has blackjack"
+        } else if dealer.hasBlackjack() {
+            wallet.checkForBalance()
+            wallet.bet = 0
+            return "Dealer has blackjack"
+        } else if player.isBust() {
             if dealer.isBust() {
+                wallet.checkForBalance()
                 wallet.bet = 0
                 return "Both Bust"
             } else {
+                wallet.checkForBalance()
+                wallet.bet = 0
                 return "Player Bust"
             }
         } else if dealer.isBust() {
             wallet.balance += (wallet.bet * 2)
+            wallet.checkForBalance()
             wallet.bet = 0
             return "Dealer bust"
         } else {
             if player.calculateScore() > dealer.calculateScore() {
                 wallet.balance += (wallet.bet * 2)
+                wallet.checkForBalance()
                 wallet.bet = 0
                 return "Player Win"
             } else if dealer.calculateScore() > player.calculateScore() {
+                wallet.checkForBalance()
                 wallet.bet = 0
                 return "Dealer Win"
             } else {
                 wallet.balance += wallet.bet
+                wallet.checkForBalance()
                 wallet.bet = 0
                 return "Tie"
             }
         }
-        
     }
 }

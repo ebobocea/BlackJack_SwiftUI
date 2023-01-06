@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Chip: Int, CaseIterable{
+enum Chip: Double, CaseIterable{
     case RedChip = 10
     case GreenChip = 20
     case BlueChip = 50

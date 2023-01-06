@@ -24,11 +24,9 @@ class GameViewModel: ObservableObject {
     func checkForBlackJack(){
         if game.player.hasBlackjack(){
             stand()
-            winner = "Player Has BlackJack"
             
         } else if game.dealer.hasBlackjack(){
             stand()
-            winner = "Dealer Has BlackJack"
         }
     }
     

@@ -24,8 +24,8 @@ class Player: ObservableObject {
     }
     
     func hasBlackjack() -> Bool{
-        for card in hand {
-            if card.rank == .ace && calculateScore() == 21{
+        if hand[0].rank == .ace || hand[1].rank == .ace{
+            if hand.count == 2 && calculateScore() == 21{
                 return true
             }
         }
