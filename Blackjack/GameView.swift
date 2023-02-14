@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var viewModel: GameViewModel
-    @State private var betAmount: String = ""
     
     var body: some View {
         
@@ -37,11 +36,11 @@ struct GameView: View {
                     .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 0, y:4)
                 
                 Spacer()
-                
+                Text("Player Hand: \(viewModel.playerHandTotal)")
+                    .foregroundColor(.white)
+                    .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 0, y:4)
                 HStack{
-                    Text("Player Hand: \(viewModel.playerHandTotal)")
-                        .foregroundColor(.white)
-                        .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 0, y:4)
+                    
                     Text(String(format: "$%.1f",viewModel.game.wallet.balance))
                         .foregroundColor(.white)
                         .shadow(color: Color(red:0, green: 0, blue: 0, opacity: 0.5), radius: 4, x: 0, y:4)
@@ -57,9 +56,9 @@ struct GameView: View {
                 HitOrStand() 
                 ChipsView()
                     .padding(.top)
-                    .opacity(viewModel.newGameButtonVisible ? 1 : 0.5)
-                    .opacity(viewModel.game.wallet.insufficientFunds ? 0.5 : 1)
-                    .disabled(!viewModel.newGameButtonVisible || viewModel.game.wallet.insufficientFunds)
+                    .opacity(viewModel.standButtonVisible ? 0.5 : 1)
+                    .disabled(viewModel.standButtonVisible)
+
             }  
         }
     }

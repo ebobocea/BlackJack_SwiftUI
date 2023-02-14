@@ -19,12 +19,15 @@ struct ChipsView: View {
                         .foregroundColor(chip.rawValue == 200 ? .black : .white)
                 )
                 .frame(minWidth: 0, maxWidth: .infinity)
+                .opacity(Int(chip.rawValue) <= Int(viewModel.game.wallet.balance) ? 1 : 0.5 )
                 .onTapGesture { 
                     viewModel.game.wallet.bet = chip.rawValue
-                    viewModel.resetGame()
+                    
+                    if Int(chip.rawValue) <= Int(viewModel.game.wallet.balance) {
+                        viewModel.resetGame()
+                    } 
                 }
             }
-            
         }
     }
 }

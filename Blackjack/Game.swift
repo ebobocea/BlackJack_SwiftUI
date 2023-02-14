@@ -25,7 +25,6 @@ class Game{
             player.hand.removeAll()
             dealer.hand.removeAll()
         }
-        
         deck.shuffle()
         
         player.receiveCard(card: deck.deal()!)
@@ -33,21 +32,16 @@ class Game{
         
         dealer.receiveCard(card: deck.deal()!)
         dealer.receiveCard(card: deck.deal()!)
-        
     }
     
     func hit(player: Player) {
-        
         player.receiveCard(card: deck.deal()!)
     }
     
     func stand() {
-        
         while dealer.calculateScore() < 17 {
             hit(player: dealer)
         }
-        
-        wallet.checkForBalance()
     }
     
     func determineWinner() -> String {

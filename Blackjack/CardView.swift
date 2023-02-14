@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     @State private var image: Image?
+
     
     init(image: Image?) {
         self._image = State(initialValue: image)

@@ -19,7 +19,7 @@ class Wallet: ObservableObject {
     }
     
     func placeBet(amount: Double){
-        if balance >= amount{
+        if balance >= amount  && balance - amount >= 0{
             balance -= amount
             bet = amount
             insufficientFunds = false
@@ -28,7 +28,7 @@ class Wallet: ObservableObject {
         }
     }
     func checkForBalance(){
-        if balance >= bet{
+        if balance > 0{
             insufficientFunds = false
         } else {
             insufficientFunds = true
